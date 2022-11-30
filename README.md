@@ -2,25 +2,10 @@
 
 ![Scala Version](https://img.shields.io/badge/Scala-2.13.8-red)
 ![SBT Version](https://img.shields.io/badge/SBT-1.7.2-blueviolet)
-![Scala CI](https://github.com/hiis-io/zio-auth-server/actions/workflows/scala.yml/badge.svg)
+![Scala CI](https://github.com/hiis-io/zio-starter/actions/workflows/scala.yml/badge.svg)
 
 ## Description
-This is a zio 2 scala application that implements an authentication and authorization server using REST API. It is made up of several subprojects as seen in [`modules`](./modules) directory.
-
-- Application: This is the aggregate of all the other modules and makes up the full application. Depends on [`service-consumer`](./modules/service-consumer) and [`service-gateway`](./modules/service-gateway)
-- Common: Contains common code used by all other modules
-- Service Gateway: Contains the REST API implementation of the Authentication server. It depends on [`common`](./modules/common) module
-- Service Consumer: Contains Notification service implementation of the Authentication server. Depends on [`common`](./modules/common) module
-
-## External Dependencies
-
-This application makes use of several external services which are required to run the application successfully.
-
-- Mongodb
-- Redis
-- Kafka
-
-Make sure all the services below are up and running before launching the application. You could optionally execute the [`docker-compose.yml`](./docker-compose.yml) file by running `docker compose -f docker-compose.yml`, for that to work you need to have docker installed in your system. This will spin up all the required services and also provide web apps to visualize your data in Kafka, Redis and Mongodb. All required configurations for these services should be setup in  [`application.conf`](./modules/application/src/main/resources/application.conf)
+TODO
 
 ## Running the application
 To run the application make sure you have sbt installed and all the external dependencies are up and running and described above, then run `sbt application/run`
