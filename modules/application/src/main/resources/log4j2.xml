@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Appenders>
+        <Console name="LogToConsole" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %logger{36} - %msg%n"/>
+        </Console>
+        <File name="LogToFile" fileName="logs/application.log">
+            <PatternLayout>
+                <Pattern>%d{HH:mm:ss.SSS} %p %c{1.} %m%n</Pattern>
+            </PatternLayout>
+        </File>
+        <File name="MongodbLogToFile" fileName="logs/mongodb-driver.log">
+            <PatternLayout>
+                <Pattern>%d{HH:mm:ss.SSS} %p %c %m%n</Pattern>
+            </PatternLayout>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Logger name="io.hiis" level="info" additivity="false">
+            <AppenderRef ref="LogToFile"/>
+            <AppenderRef ref="LogToConsole"/>
+        </Logger>
+        <Logger name="org.apache.kafka" level="error" additivity="false">
+            <AppenderRef ref="LogToConsole"/>
+            <AppenderRef ref="LogToFile"/>
+        </Logger>
+        <Logger name="reactivemongo" level="error" additivity="false">
+            <AppenderRef ref="MongodbLogToFile"/>
+        </Logger>
+        <Root level="error">
+            <AppenderRef ref="LogToFile"/>
+            <AppenderRef ref="LogToConsole"/>
+        </Root>
+    </Loggers>
+</Configuration>
