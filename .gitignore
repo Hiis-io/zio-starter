@@ -19,6 +19,7 @@ modules/it/target/
 project/metals.sbt
 project/project/metals.sbt
 project/project/project/metals.sbt
+node_modules/
 
 #All ignores
 # Dropbox settings and caches

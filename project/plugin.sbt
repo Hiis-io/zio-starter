@@ -8,5 +8,3 @@ addSbtPlugin("org.scalameta"         % "sbt-mdoc"      % "2.2.20")
 addSbtPlugin("ch.epfl.scala"         % "sbt-scalafix"  % "0.10.1")
 addSbtPlugin("se.marcuslonnberg"     % "sbt-docker"    % "1.9.0")
 addSbtPlugin("com.eed3si9n"          % "sbt-assembly"  % "1.2.0")
-
-libraryDependencies += "org.snakeyaml" % "snakeyaml-engine" % "2.4"

@@ -1,4 +1,4 @@
-# Patronize authentication server
+# Hiis ZIO Starter project
 
 ![Scala Version](https://img.shields.io/badge/Scala-2.13.8-red)
 ![SBT Version](https://img.shields.io/badge/SBT-1.7.2-blueviolet)
