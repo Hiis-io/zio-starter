@@ -39,6 +39,7 @@ object Dependencies {
     val betterMonadicForVersion = "0.3.1"
     val semanticDBVersion       = "4.5.13"
     val kindProjectorVersion    = "0.13.2"
+    val mongo4Cats              = "0.6.5"
   }
 
   object Libraries {
@@ -100,14 +101,13 @@ object Dependencies {
       "io.circe"                    %% "circe-parser"     % circe,
       "com.softwaremill.sttp.tapir" %% "tapir-json-circe" % Versions.tapir,
       "com.softwaremill.sttp.tapir" %% "tapir-json-zio"   % Versions.tapir,
-      "dev.zio"                     %% "zio-json"         % zioJson,
-      "com.typesafe.play"           %% "play-json"        % playJson,
+      "io.github.kirill5k"          %% "mongo4cats-circe" % mongo4Cats,
       "com.softwaremill.sttp.tapir" %% "tapir-json-play"  % Versions.tapir
     )
 
     val mongodb = Seq(
-      "org.reactivemongo"  %% "reactivemongo"             % reactivemongo,
-      "de.flapdoodle.embed" % "de.flapdoodle.embed.mongo" % embeddedMongodb % Test
+      "io.github.kirill5k" %% "mongo4cats-core"     % mongo4Cats,
+      "io.github.kirill5k" %% "mongo4cats-embedded" % mongo4Cats % Test
     )
 
     val postgresql = Seq(
@@ -148,10 +148,6 @@ object Dependencies {
     )
 
     val cats = Seq("dev.zio" %% "zio-interop-cats" % zioInteropCats)
-
-    val twillo = Seq("com.twilio.sdk" % "twilio" % "9.1.3")
-
-    val mail = Seq("org.apache.commons" % "commons-email" % "1.5")
 
     // Scalafix rules
     val organizeImports = "com.github.liancheng" %% "organize-imports" % organizeImportsVersion

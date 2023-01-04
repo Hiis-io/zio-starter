@@ -1,6 +1,6 @@
 ---
 id: about_coc
-title:  "ZIO Code of Conduct"
+title:  "Code of Conduct"
 ---
 
 # Contributor Covenant Code of Conduct

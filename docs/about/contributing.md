@@ -1,6 +1,6 @@
 ---
 id: about_contributing
-title:  "ZIO Contributor Guidelines"
+title:  "Contributor Guidelines"
 ---
 
 # Contributing to Transcriptase

@@ -20,6 +20,7 @@ project/metals.sbt
 project/project/metals.sbt
 project/project/project/metals.sbt
 node_modules/
+.vscode
 
 #All ignores
 # Dropbox settings and caches
